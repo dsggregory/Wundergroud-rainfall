@@ -34,8 +34,6 @@ module Enumerable
 
 end
 
-#API_KEY='fe94bc0e2730be52'
-
 WUDAILY_PATH = 'wudaily.json'
 
 class Pws
@@ -157,7 +155,7 @@ def callApi(pws)
       end
 	end
   end
-  
+
   begin
 	puts "Calling API"
 	wurl = "http://api.wunderground.com/api/#{@stations.api_key}/history_#{today}/q/pws:#{pws.name}.json"
@@ -175,7 +173,7 @@ def callApi(pws)
   rescue => e
     puts e.to_s
   end
-  
+
   return json
 end
 
